@@ -1,0 +1,121 @@
+.location{
+    >.sub_visual{
+        background-image: url(../img/bgSubLocation.jpg); height: 405px;
+    }
+
+    >.inner{
+        background: #f1f2f6;
+
+        >.container{
+            background: #f1f2f6;margin-top: 100px;
+
+            >.txt{
+                border-bottom: 1px solid #ccc; padding-bottom: 50px;
+
+                &::after{
+                    content: ''; display: block; clear: both;
+                }
+
+                >li{
+                    float: left;
+
+                    &:first-of-type{
+                        width: 45%;
+                    }
+
+                    >p{
+                        font: 64px/1  'Playfair Display', serif; color:#111;
+                    }
+                }
+
+                .branch{
+                    >li{
+                        a{
+                            color:#222;font:bold 16px/40px 'arial'; 
+                        }
+
+                        p{
+                            display: inline-block; font:14px/40px 'arial'; 
+                        }
+                    } 
+                }
+            }
+
+            >.traffic{
+
+                &::after{
+                    content: ''; clear:both; display: block; 
+                }
+
+                >li{
+                    float: left; padding: 7px; background: #eee; margin:20px 10px 0px 0px; border:1px solid #ab2227;
+
+                    >a{
+                        color:#333; font:bold 12px/1 'arial';
+                    }
+
+                }
+            }
+
+            #map{
+                width:100%; height: 500px; border:1px solid #111; position: relative; box-sizing: border-box; margin-top: 80px; filter: grayscale(0.6); transition: 0.5s;
+
+                &:hover{
+                    filter: grayscale(0);
+                }
+
+                img[title]{
+                    animation: ani linear 2s infinite; animation-play-state: paused;
+
+                    &:hover{
+                        animation-play-state: running;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@keyframes ani{
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(20px);}
+    100% {transform: translateY(0px);}
+}
+
+
+/* tablet */
+@media screen and (max-width:$tablet){
+    
+   
+}
+
+/* mobile */
+@media screen and (max-width:$cellphone){  
+    
+    .location>.inner>.container{
+        padding:0px 30px 50px 30px;
+
+        #map{
+            height: 300px; margin-top: 30px;
+        }
+
+        >.txt{
+            padding-bottom: 10px;
+
+            >li{
+                &:first-of-type {
+                    width: 100%;padding-bottom: 30px;
+                }
+
+                >p {
+                    font-size: 50px;
+                }
+            }
+        }
+
+        .traffic>li>a {
+            font-size: 12px;
+        }
+    }
+}

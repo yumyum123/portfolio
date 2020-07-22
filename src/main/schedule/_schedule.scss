@@ -1,0 +1,136 @@
+#schedule{
+    width:100%;
+
+    >.inner{
+        width:1180px; margin:0 auto; background: #261A17;
+
+        >h1{
+            font:25px/1 'arial'; color:rgba(255, 255, 255, .7); text-align: center;
+
+            &::before{
+                content:'Daelim Museum'; display: block;font:16px/40px 'arial'; color:rgba(255, 255, 255, .5); padding-top: 20px;
+            }
+
+            >b{
+                color: #fff;
+            }
+        }
+
+        >.content{
+            width: 85%; margin:0 auto; background: #fff; padding:3%;transform: translateY(20px);
+
+            &::after{
+                content: ''; display:block; clear: both;
+            }
+
+            >ul{
+                display: inline-block; padding-right: 5%; box-sizing:border-box; width: calc(100% / 4); float:left;
+
+                >li>a{
+                    display:block;padding-top:5px;border-bottom: 1px solid #333;color:#666; font:bold 14px/40px 'arial';
+
+                    &.on{
+                        color:#ab2227;border-bottom:2px solid #ab2227;
+
+                        &::after{
+                            content:'\f054';font-family: FontAwesome; display: inline-block; float: right; color:#ab2227;font-size:20px;  opacity:1;
+                        }
+                    }
+
+                    &::after{
+                        content:'\f054';font-family: FontAwesome; display: inline-block; float: right; color:#ab2227;font-size:20px; opacity:0; transition:1s;
+                    }
+                }
+            }
+
+            >div{
+                display:none;
+
+                &.on{
+                    display: block;
+                }
+
+                >article{
+                    width:calc(100% / 4); float: left; 
+
+                    >.pic{
+                        width:200px; height:240px; margin:0 auto; margin-bottom: 10px;box-shadow: 3px 3px 5px 0px #999;
+                    }
+
+                    >div{
+                        overflow:hidden;
+                    }
+
+                    img{
+                        min-width:100%; height:100%;
+                    }
+
+                    >p{
+                        color:#555; font:bold 14px/20px 'arial'; text-align: center;
+
+                        &:last-child{
+                            color:#777;
+                        }
+                    }
+                }
+            }
+            
+            
+        }
+    }
+}
+
+//tablet
+@media screen and (max-width:$tablet){
+    #schedule>.inner{
+        width:100%; 
+
+        >h1{
+            font:20px/1 'arial';
+
+            &::before{
+                font:14px/40px 'arial'; 
+            }
+        }
+
+        >.content{
+            >ul{
+                width: calc(100% / 2); 
+            }
+
+            >div>article{
+                width:calc(100% / 2); float: left; 
+
+                &:last-of-type::after{
+                    display : none;
+                }
+            }
+        }
+    }
+}
+//cellphone
+@media screen and (max-width:$cellphone){
+    #schedule>.inner{
+        >h1{
+            font:16px/1 'arial';
+
+            &::before{
+                font:12px/30px 'arial'; 
+            }
+        }
+
+        >.content{
+            >ul{
+                width: calc(100%); 
+            }
+
+            >div>article{
+                width:calc(100%); float: auto; margin-top:30px;
+
+                >.pic {
+                    width:95%;
+                }
+            }
+        }
+    }
+}

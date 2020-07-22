@@ -1,0 +1,68 @@
+.department{
+    
+    >.sub_visual{
+        background-image: url(../img/bgSubDepartment.jpg);
+    }
+
+    >.inner>.container{
+        background: url(../img/department.gif) no-repeat center; width: 100%; height: 100vmin; background-size: contain;
+
+        >.department_m{
+            width: 100%; opacity: 0;transform:translateY(-3000px); transition:3s; 
+
+            >li{
+                text-align: center;margin:20px 0px;position: relative;
+
+                >p{
+                    border: 1px solid #bbb; display: inline-block; padding: 10px 30px; margin: 0 auto; font:bold 14px/2 'arial';color:#ab2227;
+
+                    &::after{
+                        content: ''; display: inline-block;width: 1px;height: 90px;background: #bbb; position: absolute;left:50%; top: 50px;transition: 0.5s
+                    }
+                }
+                >span{
+                    position: relative;display: flex;justify-content: space-around;
+
+                    >p{
+                        border: 1px solid #bbb; display: inline-block; padding: 10px 30px; background: #fff; font:bold 14px/2 'arial';color:#ab2227;z-index:50;
+                    }
+
+                    &::after{
+                        content: ''; display: block; height: 1px; width:35%; background: #bbb; position: absolute;left:30%;top:50%; transition: 0.5s; z-index: 1;
+                    }
+                }
+                >ul{
+
+                    >li{
+                        display: block; border:1px solid #ccc; box-sizing:border-box;transition: 0.5s;
+
+                        >p{
+                            font:bold 14px/2 'arial';color:#ab2227; padding:3px; background:#fff; border-bottom: 1px solid #444;display: block;
+                        }
+
+                        >span{
+                            font:12px/2 'arial';color:#555; padding: 10px;display: inline-block; 
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+//tablet
+@media screen and (max-width:$tablet){
+
+}
+//cellphone
+@media screen and (max-width:$cellphone){
+    .department>.inner>.container{
+        background: none; height:auto;
+
+        >.department_m{
+            opacity: 1; transform:translateY(0px);
+        }
+    }
+}

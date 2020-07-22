@@ -1,0 +1,131 @@
+#project{
+    width: 100%;background: #eee;padding-top:120px; padding-bottom:50px; position: relative;
+
+    >.inner{
+        width:1180px; margin: 0 auto;background: #fff; box-sizing: border-box; min-height: 140px;
+
+        &::before {
+            content: ' '; display: block;width:60%;background: #fff;height: 140px;  position: absolute;left: 0;
+        }
+
+        >article{
+            background:#ab2227; display: inline-block; padding:25px 20px 15px 20px; position: absolute; top:90px;
+
+            &::after{
+                content: '+ 전체보기'; display: block;font:bold 14px/1 'arial'; color:#fff; margin-top:10px; margin-left: 10px;
+            }
+
+            >h2{
+                color:#fff; font:bold 12px/1 'arial';margin-bottom: 10px;
+            }
+
+            >p{
+                color:#fff; font:bold 20px/1 'arial'; padding-bottom:10px; border-bottom: 0.5px solid #eaeaea;
+
+                >span{
+                    color:#fff; font:42px/1 'arial';
+                }
+            }
+        }
+
+        >ul{
+            display: inline-block; margin:0 auto; transform: translate(150px,0px);padding:20px 0px 20px 20px; box-sizing:border-box;
+
+            &::after{
+                content: ''; display:block; clear: both;
+            }
+
+            >li{
+                float: left;list-style: disc;
+
+                &:nth-of-type(odd){
+                    margin-right: 50px;
+                }
+
+                >p{
+                    color:#444; font:bold 18px/1 'arial';
+
+                    >span{
+                        color:#666; font-size: 16px;
+
+                        &::before{
+                            content: '|'; display: inline-block; color: #ab2227; padding:0 7px;
+                        }
+                    }
+                }
+
+                >span{
+                    color:#666;  font:bold 14px/1 'arial';
+                }
+            }
+        }
+    }
+}
+
+
+
+//tablet
+@media screen and (max-width:$tablet){
+    #project>.inner{
+        width:100%;
+
+        &::before {
+            display: none;
+        }
+
+        >ul>li{
+            float: none;
+
+            &:nth-of-type(odd){
+                margin-right: 0px;
+            }
+        }
+    }
+}
+//cellphone
+@media screen and (max-width:$cellphone){
+    #project>.inner{
+        width:100%;
+
+        &::before {
+            display: none;
+        }
+
+        >ul{
+            display: inline-block; margin:0 auto;transform: translate(150px, -100px); width: 50%;transform: translate(130px,0px);
+
+            >li{
+                float: none;
+
+                >p{
+                    font-size: 16px;
+
+                    >span{
+                        font-size: 12px;
+                    }
+                }
+
+                >span {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        >article{
+            >h2{
+                font-size: 12px;
+            }
+            >p {
+                font-size: 18px;
+
+                >span {
+                    font-size: 30px;
+                }
+            }
+
+            &::after {
+                font-size: 12px;
+            }
+        }
+    }
+}

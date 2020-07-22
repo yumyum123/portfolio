@@ -1,0 +1,81 @@
+#banner{
+    width:100%; height:250px; position: relative; background: url(../img/banner.jpg) no-repeat center bottom/cover fixed; background-size: cover;
+
+    >.inner{
+        width:1180px; margin:0px auto;position: relative;height: 100%;
+
+        >ul{
+            font: 16px/1 'arial'; color: #fff;position: absolute; width: 100%;top: 50%;transform: translateY(-50%);
+
+            >li{
+                width:calc(100% / 4); float:left; text-align:center;position:relative;
+
+                >p{
+                    font:14px/2 'arial'; color:#ddd;
+                    &::before{content:'';}
+                }
+
+                >.icon{
+                    font:34px/1 'arial'; color:#eee;
+                }
+                >span{
+                    font:bold 28px/1 'arial'; color:#fff;
+                }
+
+                &::after{
+                    content: '';display: inline-block; height: 60px; width: 1px;background: #ccc; position: absolute;right: 0px;top: 50%;transform: translateY(-50%);
+                }
+                
+                &:last-of-type::after{
+                    display:none;
+                }
+            }
+            &::after{
+                content:''; display:block; clear: both;
+            }
+        }
+        
+    }
+}
+
+
+//tablet
+@media screen and (max-width:$tablet){
+    #banner{
+        >.inner{
+            width:100%;
+            >ul>li{
+                >p{
+                    font:12px/2 'arial';
+                }
+                .icon{
+                    font:28px/1 'arial';
+                }
+                >span{
+                    font:bold 24px/1 'arial';
+                }
+            }
+        }
+    }
+
+
+}
+//cellphone
+@media screen and (max-width:$cellphone){
+    #banner{
+        >.inner{
+            >ul>li{
+                >p{
+                    font:12px/2 'arial';
+                }
+                >.icon{
+                    font:22px/1 'arial';
+                }
+                >span{
+                    font:bold 20px/1 'arial';
+                }
+            }
+        }
+    }    
+
+}

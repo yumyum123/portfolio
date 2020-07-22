@@ -1,0 +1,132 @@
+#header{
+    width:100%;border-bottom: 1px solid rgba(255,255,255,0.1);position: fixed; z-index: 999;
+
+    >.inner{
+        position:relative; width:90%;height:100px; margin:0px auto; box-sizing: border-box;
+
+        &::after{
+            content: ' '; display: block;clear: both;
+        } 
+
+        >#m_gnb{
+            background: rgba(0,0,0,1);width: 100%;height: 100vh; position: fixed;top: 0px;left: 0px; padding:12%; box-sizing: border-box;display:none;
+
+            >li{
+                position: relative;
+                >a{
+                    color:#999; font:bold 2.5rem/2 'arial' ;
+                    &:hover{color:#fff;}
+                }
+
+                &:hover{
+                   transition: all 0.75s cubic-bezier(0.63, 0.03, 0.21, 1); transform: translateX(30px);color:#fff
+                }
+
+                &:hover::before{
+                    left: -30px;transition: 1s; opacity: 1; 
+                }
+
+                &::before{
+                    content: '01';display: inline-block;font: bold 1rem/1 'arial';color: #fff; height: 10px; overflow: hidden;position: absolute; top: 30px; left: 20px; opacity: 0;
+                }
+                &:nth-of-type(1)::before{content: '01';}
+                &:nth-of-type(2)::before{content: '02';}
+                &:nth-of-type(3)::before{content: '03';}
+                &:nth-of-type(4)::before{content: '04';}
+                &:nth-of-type(5)::before{content: '05';}
+                &:nth-of-type(6)::before{content: '06';}
+            }
+        }
+
+        >h1{
+            position:absolute; top:35px; left:0px; 
+
+            >a{
+                color:#ccc; font:bold 30px/60px 'arial';
+            }
+        }
+
+        >#gnb{
+            position:absolute; bottom:0px; right:0px;
+
+            &::after{
+                content: ' '; display: block;clear: both;
+            } 
+
+            >li{
+                float: left; position:relative;
+
+                >a{ 
+                    display:block;color:#777;width:120px; height:60px; font:14px/60px 'arial';text-align:center; transition:0.5s;
+
+                    &:hover{
+                        color:#ddd;
+                    }
+                }
+
+                >ul{
+                    width:100vw; display:none; position:fixed; left:0px; top:60px; z-index:2;
+
+                    a{
+                        display:inline-block; width:100%; height:60px; font:12px/60px 'arial'; color:#777; background:rgba(0,0,0,1); text-align: center;
+                    
+                        &:hover{
+                            color:#ddd;
+                        }
+                    }
+                }
+            }
+        }
+
+        >.btnCall{
+            display:block; position: absolute; right: 20px; top:50%; transform: translateY(-600%);  width:20px; height:20px; opacity: 0; transition: 1s; z-index:999; text-decoration: none;box-sizing: border-box;
+
+            &.on{
+                color:red;
+
+                >span{
+                    background:transparent;
+    
+                    &::before{
+                        top:0px;transform:rotate(45deg);
+                    }
+    
+                    &::after{
+                        top:0px; transform:rotate(-45deg);
+                    }
+                }
+            }
+
+            >span{
+                display:block; color:transparent; width:100%; height:3px; background:#999;position: absolute; top:50%; transform: translateY(-50%); 
+
+                &::before{
+                    content:''; display:block; background:#999; width:100%; height:3px;position: absolute; top: -8px;left: 0;transition:1s;
+                }
+
+                &::after{
+                    content:''; display:block; background:#999; width:100%; height:3px;position: absolute; top:8px;left: 0;transition:1s;
+                }
+            }
+        }
+    }
+}
+
+//tablet
+@media screen and (max-width:$tablet){
+    
+}
+//cellphone
+@media screen and (max-width:$cellphone){
+    #header>.inner{
+        width:90%; padding-top:20px;
+
+        >#gnb{
+            display: none;
+        }
+
+        >.btnCall{
+            opacity: 1;transform: translateY(-10%);
+        }
+    }
+}

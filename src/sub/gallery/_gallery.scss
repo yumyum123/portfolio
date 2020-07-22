@@ -1,0 +1,58 @@
+.gallery{
+    >.sub_visual{
+        background-image: url(../img/bgSubGallery.jpg);
+    }
+
+    #insta{
+        width:100%; 
+
+        &::after{
+            content: ''; display: block; clear:both;
+        }
+
+        >article{
+            width:25%;padding:5px; box-sizing: border-box;float: left;
+
+            >.inner{
+                width:100%; box-sizing: border-box; position: relative;
+
+                &:hover{ 
+                    display: block;
+
+                    p{
+                        opacity: 1;
+                    }
+                }
+
+                >.pic{
+                    width:100%; height: 320px; background-size: cover; background-repeat: no-repeat; background-position: center; margin-bottom: 20px;
+                }
+
+                >p{ 
+                    padding:10px; box-sizing: border-box; font:bold 14px/40 '맑은 고딕', 'arial'; color: #fff; opacity: 0; position: absolute; bottom: 0px; width: 100%; height:100%;background: rgba(0,0,0,0.4); transition: .5s;
+                }
+            }
+        }
+    }
+
+}
+
+
+/* tablet */
+@media screen and (max-width:$tablet){
+    .gallery{
+        #insta>article{
+            width:50%;
+        }
+    }
+    
+}
+
+/* mobile */
+@media screen and (max-width:$cellphone){  
+    .gallery{
+        #insta>article{
+            width:100%;
+        }
+    }
+}

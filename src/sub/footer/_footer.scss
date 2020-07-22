@@ -1,0 +1,128 @@
+#footer{
+    width: 100%;border-top: 1px solid #cdcdcd;
+
+    >.inner{
+        width:1180px; margin:0px auto; padding:40px 0;
+
+        &::after{
+            content: ' '; display: block; clear: both;
+        }
+
+        >.footer_right{
+            width: 168px; float: right;margin-right: -5px;
+
+            >ul>li{
+                float: left;
+
+                >.icon{
+                    width:42px; height: 30px;
+
+                    >i{
+                        font-size: 30px; text-align: center; color:#555;
+                    }
+                }
+
+                >select{
+                    width:155px; height: 30px;color:#777;margin-top: 5px;
+                }
+            }
+        }
+
+        >.footer_left{
+            width:calc(100% - 220px); float: left;
+
+            ul{
+                &::after{
+                    content: ' '; display: block; clear: both;
+                }
+
+                >li{
+                    float: left;color:#444; font:bold 14px/1 'arial';padding-bottom: 20px;
+
+                    &:after{
+                        content: '|'; display: inline-block; padding:0 10px; color: #ccc;
+                    }
+                }
+            }
+
+            >h2{
+                color:#444; font:bold 20px/1 'arial'; padding: 10px 0;
+
+                >span{
+                    color:#ab2227; padding-left:5px;
+                }
+            }
+
+            >p{
+                color:#666; font:14px/25px 'arial';
+            }
+        }
+    }
+}
+
+//tablet
+@media screen and (max-width:$tablet){
+    #footer{
+        padding:0 20px; box-sizing: border-box;
+
+        >.inner{
+            width:100%;
+
+            >.footer_left{
+                >ul>li{
+                    font:bold 12px/1 'arial';padding-bottom:10px;
+
+                    &::after{ 
+                        padding:0 6px;
+                    }
+                }
+
+                >h2{
+                    color:#333; font:bold 16px/1 'arial';
+                }
+
+                >p{
+                    color:#888; font:10px/20px 'arial';
+                }
+            }
+        }
+    }
+}
+//cellphone
+@media screen and (max-width:$cellphone){
+    #footer{
+        padding:0 20px; box-sizing: border-box;
+
+        >.inner{
+            width:100%;
+
+            >.footer_right{
+                float: left; margin-bottom: 20px; width: 100%;
+
+                >ul>li>select{
+                    margin-top: 0px;
+                }
+            }
+
+            >.footer_left{
+                width: 100%;
+
+                >ul>li{
+                    font:bold 12px/1 'arial';padding-bottom:10px;
+
+                    &::after{ 
+                        padding:0 6px;
+                    }
+                }
+
+                >h2{
+                    color:#333; font:bold 16px/1 'arial';
+                }
+
+                >p{
+                    color:#888; font:10px/20px 'arial';
+                }
+            }
+        }
+    }
+}
