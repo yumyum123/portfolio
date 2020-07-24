@@ -1,0 +1,64 @@
+@charset 'utf-8';
+* {margin:0px; padding:0px;}
+ul,ol,li {list-style:none;}
+a {text-decoration:none;}
+
+:root{
+    --dist:900px;
+}
+
+#frame{position: fixed; width:100%; height:100%; transition: 1.5s;}
+#frame.r0{background: red;}
+#frame.r1{background: lightseagreen;}
+#frame.r2{background: orange;}
+#frame.r3{background: lightgreen;}
+#frame.r4{background: violet;}
+#frame.r5{background: yellow;}
+#frame.r6{background: silver;}
+#frame.r7{background: pink;}
+
+
+#wrap{width:800px; height:800px; position: absolute; top:50%; margin-top: -400px; left:0%; margin-left: -200px; transform: rotate(0deg); transition: 0.5s cubic-bezier(.5,-1,.57,2);}
+#wrap.r1{transform: rotate(0deg);}
+#wrap.r2{transform: rotate(-20deg);}
+#wrap.r3{transform: rotate(-40deg);}
+#wrap.r4{transform: rotate(-60deg);}
+#wrap.r5{transform: rotate(-80deg);}
+#wrap.r6{transform: rotate(-100deg);}
+#wrap.r7{transform: rotate(-120deg);}
+
+#wrap{filter: brightness(0.8);}
+#wrap:hover{filter: brightness(1); transition: 0.5s;}
+#wrap.r1{background: url(../img/port1.jpg) no-repeat right top;}
+#wrap.r2{background: url(../img/port2.jpg) no-repeat left 100%;}
+#wrap.r3{background: url(../img/port3.jpg) no-repeat right 100%;}
+
+
+.navi{width: 100%; position: absolute; top:50%; left:0%; margin-top: -50px;}
+.navi>li{width:50%; position: absolute; top:0px; left: 0px; font:bold 100px/1 'arial'; color:#333;}
+
+.navi>li:nth-of-type(1){transform: rotate(0deg) translateX(var(--dist));}
+.navi>li:nth-of-type(2){transform: rotate(20deg) translateX(var(--dist));}
+.navi>li:nth-of-type(3){transform: rotate(40deg) translateX(var(--dist));}
+.navi>li:nth-of-type(4){transform: rotate(60deg) translateX(var(--dist));}
+.navi>li:nth-of-type(5){transform: rotate(80deg) translateX(var(--dist));}
+.navi>li:nth-of-type(6){transform: rotate(100deg) translateX(var(--dist));}
+.navi>li:nth-of-type(7){transform: rotate(120deg) translateX(var(--dist));}
+
+#btn{position: absolute; left:50px; top:50%; transform: translateY(-50%);}
+#btn>li{margin-bottom: 10px;}
+#btn>li>a{font:14px/2 'arial'; color:#333; transition: 0.5s; opacity: 0.5;}
+#btn>li.on>a{opacity: 1;}
+
+#frame.start {background: #000; opacity: 0.8; z-index: 3; position: absolute; width: 100%; height: 100%; transition:none;}
+#frame.start>h1{font:50px/1 'arial'; font-weight:700;color: #fff;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+
+
+
+@media screen and (max-width:1179px){
+    #wrap{width:500px; height:500px;}
+}
+
+@media screen and (max-width:539px){
+
+}
