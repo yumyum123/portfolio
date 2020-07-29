@@ -1,0 +1,64 @@
+﻿@charset "utf-8";
+
+
+body{background: #333;}
+
+/* header */
+header {width:350px; height:100%; position:fixed; top:0px; left:0px; background:#fff; transition:0.5s;}
+header>h1>a>i{font: 14px/ 'arial'; color: #888; position: absolute; left: 50px;top: 15%; margin-top: -115px;}
+header>.filter{position: absolute; top: 75%; left:50px;}
+header>.filter::before{content: 'This is the portfolio of'; display: block;font:14px/1 'arial'; color:#aaa;margin-bottom: 10px;}
+header>.filter::after{content: ''; display: block; width: 50%; height: 1px; margin-top:15px; background: #ccc;}
+header>.filter>li>a{font: bold 16px/1.5 'arial'; color:#999;}
+header>.filter>li a.on{color:#666; text-shadow: 2px 2px 3px #ccc;}
+header>.icon{position: absolute; top: 90%; left:50px;}
+header>.icon::after{content: ''; display: block; clear: both;}
+header>.icon>li{float: left;}
+header>.icon>li>i{color: #444; padding-right: 10px;}
+
+
+section{margin-left: 350px;}
+section .inner{width: 100%; transition: 0.5s; opacity: 0;}
+section.on .inner {opacity:1;}
+section .inner::after{content: ''; display: block; clear: both;}
+section .inner .box{width:20%; float: left; position: relative;}
+section .inner .box>article>h2{position: absolute; bottom: 50px;font: 28px/1 'Coda Caption', sans-serif; padding:10px 20px; color:#fff;}
+section .inner .box>article>p{position: absolute; bottom: 0;font:16px/1.2 'arial'; padding:10px 20px; color:#ddd;}
+section .inner .box>article>img{width: 100%; filter: grayscale(1);}
+
+section .inner .twt{width: 20%; height: 200px; background: #121212; float: left; position: relative;}
+section .inner .twt::before{content: '\f099'; display: block; font-family: FontAwesome; color:#aaa; padding: 20px;}
+section .inner .twt>article>p{font:14px/1.5 'arial'; color: #aaa;}
+
+
+@media screen and (max-width:1599px){
+    section .inner .box {width:25%;}
+  }
+  @media screen and (max-width:1199px){
+    section .inner .box>article>h2{font-size: 24px;bottom: 36px;}
+    section .inner .box>article>p{font-size: 14px;}
+    section .inner .box {width:33.333%;}
+  }
+  @media screen and (max-width:879px){
+    header {width:250px;}
+    section {margin-left:250px;}
+    section .inner .box {width:50%;}
+    section .inner .box>article>h2{font-size: 20px;bottom: 36px;}
+  }
+  @media screen and (max-width:679px){
+    section .inner .box {width:100%;}
+  }
+  @media screen and (max-width:539px){
+    header {width:100%; height:80px; position:relative;}
+    header .filter{top:30px;}
+    header .filter::before, header .filter::after{display: none;}
+    header .filter li{float: left; margin-right: 10px;}
+    header .icon{position: relative;float: right;top:40%; left: -10px;}
+    section { margin-left:0px;}
+    section .inner .box {width:50%;}
+  }
+  
+  @media screen and (max-width:400px){
+    section { margin-left:0px;}
+    section .inner .box {width:100%;}
+  }

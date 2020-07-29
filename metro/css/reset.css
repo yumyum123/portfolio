@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+* {margin:0px; padding:0px;}
+ul,ol,li {list-style:none;}
+a {text-decoration:none; outline: 1; color:#777;}
+img, fieldset{border: 0;}
+table, th, td{border-collapse:collapse;}
+input, select, textarea, form, img, label{vertical-align: middle; box-sizing: border-box;}
+textarea{resize: none;}
+.hidden{position: absolute;top:-999999px; opacity: 0;}
