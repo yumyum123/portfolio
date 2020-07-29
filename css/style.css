@@ -35,7 +35,7 @@ a {text-decoration:none;}
 
 
 .navi{width: 100%; position: absolute; top:50%; left:0%; margin-top: -50px;}
-.navi>li>a{width:50%; position: absolute; top:0px; left: 0px; font:bold 100px/1 'arial'; color:#333;}
+.navi>li{width:50%; position: absolute; top:0px; left: 0px; font:bold 100px/1 'arial'; color:#333;}
 
 .navi>li:nth-of-type(1){transform: rotate(0deg) translateX(var(--dist));}
 .navi>li:nth-of-type(2){transform: rotate(20deg) translateX(var(--dist));}
