@@ -60,7 +60,7 @@ a {text-decoration:none;}
     transform: translateX(-50%);}
 
 @media screen and (max-width:1179px){
-    #wrap{width:500px; height:500px;}
+    /* #wrap{width:500px; height:500px;} */
 }
 
 @media screen and (max-width:539px){

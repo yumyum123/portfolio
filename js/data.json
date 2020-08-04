@@ -1,0 +1,28 @@
+[
+    {
+        "title":"기업형 사이트",
+        "technology":"html, css, scss, jquery, gulp",
+        "description":"html, css, scss, jquery, gulp
+            ajax를 이용한 data 연결
+            scipt를 이용한 swipe 기능 구현
+            member서브페이지 입력된 data값이 없을 시 alert출력
+            youtube서브페이지 ajax를 통한 데이터 연결
+            filker연결, search기능 구현
+            kakaomap연동하여 subpage구현",
+        "design":"img/companysite.jpg"
+    },
+    {
+        "title":"모션 사이트",
+        "technology":"html, css, jquery",
+        "description":"html, css, jquery
+            hover시 text와 img가 보여짐",
+        "design":"img/companysite.jpg"
+    },
+    {
+        "title":"metro 사이트",
+        "technology":"html, css, jquery",
+        "description":"html, css, jquery
+            isotope를 이용해 filter기능 구현",
+        "design":"img/companysite.jpg"
+    }
+]
