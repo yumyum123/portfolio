@@ -1,6 +1,6 @@
 # Portfolio
 
-+URL : https://yumyum123.github.io/portfolio/
++ URL : https://yumyum123.github.io/portfolio/
 
 # 설명
 + 사용기술 : ES6, CSS, , scss, jQuery, GULP
