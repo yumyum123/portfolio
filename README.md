@@ -1,6 +1,6 @@
-# webportfolio
+# portfolio
 
-+ PortFolio 포트폴리오 : https://yumyum123.github.io/webportfolio/
++ PortFolio 포트폴리오 : https://yumyum123.github.io/portfolio/
 
 # 설명
 + 사용기술 : ES6, CSS, , scss, jQuery, GULP
